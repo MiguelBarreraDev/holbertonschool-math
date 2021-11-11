@@ -2,15 +2,14 @@
 #define COMPLEX_H
 
 #include <stdio.h>
-
 /**
- * struct complex - store the real and imaginary
+ * struct Complex - store the real and imaginary
  * part of a complex number
  *
  * @re: variable that will stored the real parte
  * @im: varible that will stores the imaginary part
  */
-typedef struct complex
+typedef struct Complex
 {
 	double re;
 	double im;
