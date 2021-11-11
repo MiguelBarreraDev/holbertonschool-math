@@ -7,10 +7,10 @@
 void display_complex_number(complex c)
 {
 	if (c.re == 0)
-		printf("%di", c.im);
+		printf("%fi", c.im);
 	if (c.im == 0)
-		printf("%d", c.re);
+		printf("%f", c.re);
 	if (c.re && c.im)
-		printf("%d + %di", c.re, c.im);
+		printf("%f + %fi", c.re, c.im);
 	putchar(10);
 }
