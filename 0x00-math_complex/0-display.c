@@ -18,7 +18,7 @@ void display_complex_number(complex c)
 	}
 	if (c.re != 0 && c.im != 0)
 	{
-		if(dre == 0)
+		if (dre == 0)
 			printf("%.0f ", c.re);
 		else
 			printf("%.1f ", c.re);
