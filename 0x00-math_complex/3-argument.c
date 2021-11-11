@@ -8,5 +8,8 @@
  */
 double argument(complex c)
 {
-	return ((c.re != 0) ? atan2(c.im, c.re) : 0);
+	double arg;
+
+	arg = (c.re != 0) ? atan2(c.im, c.re) : 0;
+	return (arg);
 }
