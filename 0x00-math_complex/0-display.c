@@ -6,56 +6,58 @@
  */
 void display_complex_number(complex c)
 {
-	char i = '+';
-	float dre, dim;
+	double dre, dim;
 
-	dre = fmod(c.re, 1);
-	dim = fmod(c.im, 1);
-	if (c.im < 0)
+	if (c.im == 0)
 	{
-		c.im = -(c.im);
-		i = '-';
+		printf("%.0f\n", c.re);
 	}
-	if (c.re != 0 && c.im != 0)
+	else
 	{
+		dre = fmod(c.re, 1);
+		dim = fmod(c.im, 1);
 		if (dre == 0)
-			printf("%.0f ", c.re);
-		else
-			printf("%.1f ", c.re);
-		if (c.im == 1)
-			printf("%c i\n", i);
-		else
 		{
-			if (dim == 0)
-				printf("%c %.0fi\n", i, c.im);
-			else
-				printf("%c %.1fi\n", i, c.im);
+			printf("%.0f", c.re);
 		}
-	}
-	else if (c.im == 0)
-	{
-		if (dre == 0)
-			printf("%.0f\n", c.re);
 		else
-			printf("%.1f\n", c.re);
-	}
-	else if (c.re == 0)
-	{
-		if (c.im == 1)
-			printf("i\n");
-		else if (c.im > 1)
 		{
-			if (dim == 0)
-				printf("%.0f\n", c.im);
-			else
-				printf("%.1f\n", c.im);
+			printf("%.1f", c.re);
 		}
-		else if (c.im < 0)
+		if (c.im > 0)
 		{
+			printf(" + ");
+			if (c.im == 1)
+			{
+				printf("i\n");
+				return;
+			}
 			if (dim == 0)
-				printf("%c %.0f\n", i, c.im);
+			{
+				printf("%.0fi\n", c.im);
+			}
 			else
-				printf("%c %.1f\n", i, c.im);
+			{
+				printf("%.1fi\n", c.im);
+			}
+		}
+		if (c.im < 0)
+		{
+			printf(" - ");
+			if(c.im == -1)
+			{
+				printf("i\n");
+				return;
+			}
+			printf("%.0fi\n", -c.im);
+			if (dim == 0)
+			{
+				printf("%.0fi\n", c.im);
+			}
+			else
+			{
+				printf("%.1fi\n", c.im);
+			}
 		}
 	}
 }
