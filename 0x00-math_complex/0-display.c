@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * display_complex_number - show complex number
  *
@@ -8,9 +7,9 @@
 void display_complex_number(complex c)
 {
 	if (c.re == 0)
-		printf("%di\n", c.im);
+		printf("%.0f\n", c.im);
 	if (c.im == 0)
-		printf("%d\n", c.re);
+		printf("%.0f\n", c.re);
 	if (c.re != 0 && c.im != 0)
-		printf("%d + %di\n", c.re, c.im);
+		printf("%.0f + %.0fi\n", c.re, c.im);
 }
