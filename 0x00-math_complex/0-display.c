@@ -8,5 +8,5 @@ void display_complex_number(complex c)
 {
 	float re = c.re, im = c.im;
 
-	printf("%f + %fi\n", re, im);
+	printf("%.0f + %.0fi\n", re, im);
 }
