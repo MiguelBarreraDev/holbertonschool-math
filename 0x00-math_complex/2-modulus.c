@@ -9,7 +9,5 @@
  */
 double modulus(complex c)
 {
-	printf("hola\n");
-
 	return (sqrt(pow(c.re, 2) + pow(c.im, 2)));
 }
