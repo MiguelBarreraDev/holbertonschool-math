@@ -6,6 +6,8 @@
  */
 void display_complex_number(complex c)
 {
+	if (c == NULL)
+		return;
 	if (c.im == 0)
 		printf("%.0f\n", c.re);
 	else
