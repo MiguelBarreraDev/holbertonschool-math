@@ -1,0 +1,3 @@
+#!/bin/bash
+
+gcc -Wall -Werror -Wextra -std=c89 -pedantic test.c $1 $2
