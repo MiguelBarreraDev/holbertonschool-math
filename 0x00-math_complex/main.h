@@ -1,8 +1,6 @@
 #ifndef COMPLEX_H
 #define COMPLEX_H
 
-#include <stdio.h>
-
 /**
  * struct complex - store the real and imaginary
  * part of a complex number
