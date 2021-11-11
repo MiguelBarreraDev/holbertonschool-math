@@ -8,5 +8,5 @@
  */
 double argument(complex c)
 {
-	return (atan(c.im / c.re));
+	return (atan2(c.im, c.re));
 }
