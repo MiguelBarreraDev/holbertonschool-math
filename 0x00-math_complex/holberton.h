@@ -11,8 +11,8 @@
  */
 typedef struct Complex
 {
-	int re;
-	int im;
+	double re;
+	double im;
 } complex;
 
 /* functions prototypes */
