@@ -23,7 +23,7 @@ double _sqrt(double p)
  */
 t_cell *heron(double p, double x0)
 {
-	double fx = 0, error = 0;
+	double fx = 0, _error = 0;
 
 	t_cell *head = NULL, *new = NULL, *tail;
 
@@ -37,8 +37,8 @@ t_cell *heron(double p, double x0)
 	new->elt = fx;
 	new->next = NULL;
 
-	error = (fx > _sqrt(p)) ? fx - _sqrt(p) : _sqrt(p) - fx;
-	if (error <= 0.0000001)
+	_error = (fx > _sqrt(p)) ? fx - _sqrt(p) : _sqrt(p) - fx;
+	if (_error <= 0.0000001)
 		return (head);
 
 	fx = (0.5) * (x0 + (p / x0));
